@@ -12,9 +12,9 @@ Reset removes every edition and the shared Android runtime.
 
 ## Verified release input
 
-Prepared on 2026-10-08 from the APKPure `18.4-5637330` ARM64 XAPK
+Prepared on 2026-10-21 from the APKPure `18.5-5722094` ARM64 XAPK
 ([source](https://d.apkpure.net/b/XAPK/com.riotgames.league.teamfighttacticstw?version=latest)).
-Android manifest metadata confirms version code `8637330`.
+Android manifest metadata confirms version code `8722094`.
 Official Android Build Tools 36 verified the cryptographic signatures, package
 IDs, split IDs, and matching version codes of all four APKs. All use the pinned
 Riot certificate SHA-256:
@@ -25,10 +25,10 @@ Riot certificate SHA-256:
 
 | APK | Bytes | SHA-256 |
 | --- | ---: | --- |
-| base.apk | 113013047 | 0f66aa2fbb543649dcaefd858d8a961e0a0c8435ac37a806537bc0acd49dc245 |
-| config.arm64_v8a.apk | 95139041 | d6364e9b3d2fe32ec31b59d04d4880c3d42f6f0417241403b03f1de12c8c5531 |
-| config.en.apk | 37273 | b4f92de2f9739bfd16019a4d6eee8c914c588eb30f9482fb7f700a906d8ddda1 |
-| config.mdpi.apk | 83007 | 22d490bc322da3812b0a3f2078d59d735872c8a158dc7a59a7080ceb9342a0d2 |
+| base.apk | 97677623 | 6d72b984aafde27bbf462140bd908089e23bd4e0b489bc674723a8238939caeb |
+| config.arm64_v8a.apk | 95859937 | b146569263ab9d8830ccf0eb27728de4aa278667e832099a321e7b3d0a7b418b |
+| config.en.apk | 37273 | a5904ab0382f6f6ba95ad2d57f79700a8c7bb8ab89ab81a955d6a5071578bfdd |
+| config.mdpi.apk | 83007 | b0ee56ead27fb75082f88e401f0259e73cea14865aa969d074ced20d79d4020e |
 
 ## Update channel
 
@@ -94,3 +94,11 @@ for the source-bundle hash, test setup, and limits.
 
 The signed 18.4 feed was published on 2026-10-08. Its public signature and all
 four APK downloads passed the size/hash checks with immutable cache headers.
+
+## TFT 18.5 signature verification — 2026-10-21
+
+The four APKs passed `scripts/verify-game-apks.py` (pinned Riot certificate,
+package, split IDs, and matching version codes). See
+[the shared validation record](reproducibility.md#tft-185-5722094-signature-verification--2026-10-21)
+for the source-bundle hash and limits. Emulator upgrade/startup checks and the
+signed 18.5 feed are still pending.
