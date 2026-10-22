@@ -13,7 +13,7 @@ packages, downloaded Android runtime, AVD userdata, or signing credentials.
 | Google APIs ARM64 system image | Android 36 revision 7 | `fb47d861d6f87230ee0fe70f610d579935ca77f41a0eefbf391595d3dc4b5ee2` |
 | Sparkle | 2.9.4 | `ce89daf967db1e1893ed3ebd67575ed82d3902563e3191ca92aaec9164fbdef9` |
 
-The game release is `18.4-5637330`, package
+The game release is `18.5-5722094`, package
 `com.riotgames.league.teamfighttactics`. The four split names, sizes, and
 SHA-256 values are in `launcher/Resources/release-manifest.json`; the APK bytes
 are deliberately absent from Git.
@@ -21,8 +21,38 @@ are deliberately absent from Git.
 The current release manifest itself hashes to:
 
 ```text
-b2c0ffe7c98901a70116f105aa7e0fc710668c601f9da225e81455ab979275eb  launcher/Resources/release-manifest.json
+adcec7172c12361c79d1f36f4f604751954cc4457a421008edee493a356aa802  launcher/Resources/release-manifest.json
 ```
+
+## TFT 18.5-5722094 signature verification — 2026-10-21
+
+Global, Vietnam, and Taiwan `18.5-5722094` (version code `8722094`) were
+extracted from the complete ARM64 APKPure XAPK bundles for their respective
+package IDs. Each edition uses the base, ARM64, English, and MDPI splits.
+`scripts/verify-game-apks.py` with official Android Build Tools 36 verified
+every APK signature, package, version code, and split ID against the pinned
+Riot certificate SHA-256
+`931d969502f3de01a4c239e4199211ebdc57bb9a7526394b9e3e2d1cc079ff0c`.
+
+| Edition | Complete XAPK SHA-256 |
+| --- | --- |
+| Global | `7e4ad666760d6e8b8cbafbc7abbec72dab7cae7dc9d12ebca1cc47e320030d0f` |
+| Vietnam | `5d5ceedb812f86d862869ed8985b92d919cc6693fd85ce7f1e22c223968e26a5` |
+| Taiwan | `0064408959e4c41109bc4ac15b19edf5c8677eb1cbbff2aa4b51243715a67d31` |
+
+Global APK hashes are pinned in the release manifest; regional hashes are
+recorded in [Vietnam](vietnam.md) and [Taiwan](taiwan.md).
+The Vulkan buffer-view-cache allowlist remains restricted to previously tested
+Global builds, so 18.5 automatically uses the existing uncached rendering path.
+
+The full tests, Swift typecheck, repository validation, ad-hoc app build with
+the four Global APKs, and nested code-signature verification passed. The
+provisioning integration test passed and installed the bundled 18.5 release,
+whose version code is newer than the hosted Global feed (`18.4-5673041`).
+
+Not yet done for 18.5: the in-place upgrade and startup check on an existing
+AVD, account sign-in, a full match, performance measurement, and publication
+of the signed game feeds.
 
 ## TFT 18.4-5637330 validation — 2026-10-08
 

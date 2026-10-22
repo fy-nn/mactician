@@ -13,9 +13,9 @@ finishes. Reset removes all editions and the shared runtime.
 
 ## Verified release input
 
-Prepared on 2026-10-08 from the APKPure `18.4-5637330` ARM64 XAPK
+Prepared on 2026-10-21 from the APKPure `18.5-5722094` ARM64 XAPK
 ([source](https://d.apkpure.net/b/XAPK/com.riotgames.league.teamfighttacticsvn?version=latest)).
-Android manifest metadata confirms version code `8637330`.
+Android manifest metadata confirms version code `8722094`.
 Official Android Build Tools 36 verified the cryptographic signatures, package
 IDs, split IDs, and matching version codes of all four APKs. All use the pinned
 Riot certificate SHA-256:
@@ -26,10 +26,10 @@ Riot certificate SHA-256:
 
 | APK | Bytes | SHA-256 |
 | --- | ---: | --- |
-| base.apk | 113017143 | fe37e7fbcdf68c6d74a97ecf1159bb678a1beff902c622cd8b95539b2bcf3abc |
-| config.arm64_v8a.apk | 95139041 | 624143e86e669717e993eef6d504ad1ba0062a7029c74091fca424f1298a5580 |
-| config.en.apk | 37273 | 61154b649700d41c5a38ba9724c4ce059fd9cf706901f5b44c0179f2903be6a7 |
-| config.mdpi.apk | 83007 | 005ceca1e6774febfa97eaa28bd32b7610d409f6168bd45e0fdbea36975b27a3 |
+| base.apk | 97681719 | dd4063de039fc5a83f75bdc9c6434bd27db39b222bd650bf69f917e5f0892d1f |
+| config.arm64_v8a.apk | 95859937 | d0a02f22a783db10184abe8c7beeefc96dd1acd5ab36cee5907c829b81316130 |
+| config.en.apk | 37273 | 7f0a931bddb47562f0eda728702ba1a5966518863359328d0f9b7414e4cdf0b2 |
+| config.mdpi.apk | 83007 | 34a6763a682710064ff35fe03fa47db4f5d14292f6e81530c53ecd60fc81ec54 |
 
 The four private inputs live in `private/tft-vietnam-apks/`. The signed update
 feed is generated with `MACTICIAN_GAME_EDITION=vietnam`; see
@@ -90,3 +90,11 @@ for the source-bundle hash, test setup, and limits.
 
 The signed 18.4 feed was published on 2026-10-08. Its public signature and all
 four APK downloads passed the size/hash checks with immutable cache headers.
+
+## TFT 18.5 signature verification — 2026-10-21
+
+The four APKs passed `scripts/verify-game-apks.py` (pinned Riot certificate,
+package, split IDs, and matching version codes). See
+[the shared validation record](reproducibility.md#tft-185-5722094-signature-verification--2026-10-21)
+for the source-bundle hash and limits. Emulator upgrade/startup checks and the
+signed 18.5 feed are still pending.

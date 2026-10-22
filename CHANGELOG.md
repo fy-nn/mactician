@@ -4,6 +4,13 @@ The current application metadata is version 1.3.1, build 56.
 
 ## Unreleased
 
+### Changed
+
+- Update Global, Vietnam, and Taiwan TFT to `18.5-5722094` (version code
+  `8722094`); pin the verified Global APKs for future launcher builds. The
+  Vulkan buffer-view cache stays gated to previously measured builds, so 18.5
+  uses the uncached rendering path.
+
 ## 1.3.1 — 2026-10-09
 
 ### Added
